@@ -15,10 +15,10 @@ public class Spike {
     public Spike(Context context){
         spike[0] = BitmapFactory.decodeResource(context.getResources(),R.drawable.pixel_onigiri0);
         spike[0] = Bitmap.createScaledBitmap(spike[0], 120, 120, true);
-        spike[1] = BitmapFactory.decodeResource(context.getResources(),R.drawable.pixel_onigiri2);
-        spike[1] = Bitmap.createScaledBitmap(spike[0], 120, 120, true);
-        spike[2] = BitmapFactory.decodeResource(context.getResources(),R.drawable.pixel_onigiri1);
-        spike[2] = Bitmap.createScaledBitmap(spike[0], 120, 120, true);
+        spike[1] = BitmapFactory.decodeResource(context.getResources(),R.drawable.pixel_onigiri1);
+        spike[1] = Bitmap.createScaledBitmap(spike[1], 120, 120, true);
+        spike[2] = BitmapFactory.decodeResource(context.getResources(),R.drawable.pixel_onigiri2);
+        spike[2] = Bitmap.createScaledBitmap(spike[2], 120, 120, true);
         random = new Random();
         resetPosition();
 

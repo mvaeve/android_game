@@ -53,7 +53,7 @@ public class GameView extends View {
         dWidth = size.x;
         dHeight = size.y;
         rectBackground = new Rect(0,0,dWidth,dHeight);
-        rectGround = new Rect(0,dHeight - ground.getHeight(), dWidth, dHeight);
+        rectGround = new Rect(0,dHeight - ground.getHeight() -200, dWidth, dHeight);
         handler = new Handler();
         runnable = new Runnable() {
             @Override

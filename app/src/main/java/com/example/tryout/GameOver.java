@@ -26,13 +26,20 @@ public class GameOver extends AppCompatActivity {
         ivNewHighest = findViewById(R.id.ivNewHighest);
         int points = getIntent().getExtras().getInt("points");
         tvPoints.setText(""+points);
+//        mode 0 is private
         sharedPreferences = getSharedPreferences("my_pref", 0);
         int highest = sharedPreferences.getInt("highest",0);
         if (points >highest){
+            ivNewHighest.setVisibility(View.VISIBLE);
+            highest = points;
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt("highest", highest);
             editor.commit();
         }
+        else{
+            ivNewHighest.setVisibility(View.GONE);
+        }
+
         tvHighest.setText("" + highest);
 
     }
