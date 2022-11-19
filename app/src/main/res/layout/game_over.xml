@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/restart"
+            android:onClick="restart" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/exit" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivNewHighest"
+            android:background="@drawable/high_score"
+            android:visibility="gone"/>
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:padding="10dp"
+            >
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your points: "
+                    android:fontFamily="@font/love_glitch"
+                    android:textSize="50sp" />
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="35"
+                    android:layout_marginTop="10dp"
+                    android:textSize="35sp"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:fontFamily="@font/undertale_battle"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:fontFamily="@font/love_glitch"
+                    android:text="Highest: "
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/tvHighest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="24sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/holo_purple"
+                    android:fontFamily="@font/undertale_battle" />
+
+            </TableRow>
+        </TableLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="80dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
